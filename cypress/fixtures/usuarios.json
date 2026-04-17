@@ -1,0 +1,33 @@
+{
+  "admin": {
+    "email": "admin@biblioteca.com",
+    "senha": "admin123"
+  },
+
+  "comum": {
+    "email": "usuario@teste.com",
+    "senha": "user123"
+  },
+
+  "valido":{
+      "maria": {
+      "name": "Maria Santos",
+      "email": "mariass@email.com",
+      "senha": "senha123"
+    },
+    "maria_novo":{
+      "name": "Maria Santos da Silva",
+      "email": "mariassilva@email.com",
+      "senha": "kkjP#j$poq"
+    }
+  },
+
+  "invalido":{
+      "maria": {
+      "name": "m",
+      "email": "mariass-email.com",
+      "senha": "senha"
+    }
+  }
+  
+}
