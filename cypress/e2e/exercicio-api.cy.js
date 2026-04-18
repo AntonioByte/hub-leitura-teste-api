@@ -30,7 +30,7 @@ describe('Testes da funcionalidade de usuário', () => {
         }).then(response => {
             expect(response.status).to.equal(200)
             expect(response.body.users).to.be.an('array')
-            //cy.log(response)
+            
         })
     });
 
@@ -47,7 +47,7 @@ describe('Testes da funcionalidade de usuário', () => {
             expect(response.status).to.equal(201)
             expect(response.body.message).to.equal("Usuário criado com sucesso.")
             id = response.body.user.id
-            //cy.log(response)
+            
         })
     });
 
