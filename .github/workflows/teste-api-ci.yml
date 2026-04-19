@@ -6,25 +6,21 @@ name: Teste-API-CI Cypresss
 on:
   push:
     branches: [ "main" ]
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 24
         cache: 'npm'
-    - run: npm install
-    - run: npx cypress run
+    - name: Instalar dependências   
+      run: npm install
+
+    - name: Executar teste
+      run: npm test
